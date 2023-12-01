@@ -12,7 +12,7 @@ class _SplashScreenState extends State<SplashScreen> {
   void initState() {
     super.initState();
     // Gọi hàm _navigateToLoginScreen khi SplashScreen được hiển thị trong 2 giây
-    Timer(Duration(seconds: 2), () {
+    Timer(Duration(seconds: 3), () {
       _navigateToLoginScreen();
     });
   }

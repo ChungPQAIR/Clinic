@@ -9,7 +9,7 @@ class LoginScreen extends StatelessWidget {
     return Scaffold(
       body: Container(
         width: 415,
-        height: 840,
+        height: 870,
         padding: const EdgeInsets.symmetric(horizontal: 32),
         clipBehavior: Clip.antiAlias,
         decoration: BoxDecoration(
@@ -267,7 +267,7 @@ class LoginScreen extends StatelessWidget {
                       children: [
                         Text(
                           'Bạn chưa có tài khoản? ',
-                          textAlign: TextAlign.center,
+                          textAlign: TextAlign.start,
                           style: TextStyle(
                             color: Color(0xFFF5F6F8),
                             fontSize: 14,
@@ -276,35 +276,30 @@ class LoginScreen extends StatelessWidget {
                             height: 0.6,
                           ),
                         ),
-                        Row(
-                          children: [
-                            InkWell(
-                              onTap: () {
-                                // Thực hiện hành động khi nhấp vào "Đăng ký ngay"
-                                Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) => SignUpForm()),
-                                );
-                              },
-                              child: Text(
-                                'Đăng ký ngay',
-                                textAlign: TextAlign.center,
-                                style: TextStyle(
-                                  color: Color(0xFF0888D0),
-                                  fontSize: 14,
-                                  fontFamily: 'Inter',
-                                  fontWeight: FontWeight.w500,
-                                  height: 0.9,
-                                ),
-                              ),
+                        InkWell(
+                          onTap: () {
+                            print("Đã nhấp vào Đăng ký ngay");
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => SignUpForm()),
+                            );
+                          },
+                          child: Text(
+                            'Đăng ký ngay',
+                            textAlign: TextAlign.start,
+                            style: TextStyle(
+                              color: Color(0xFF0888D0),
+                              fontSize: 14,
+                              fontFamily: 'Inter',
+                              fontWeight: FontWeight.w500,
+                              height: 0.10,
                             ),
-                            const SizedBox(width: 10),
-                          ],
+                          ),
                         ),
                       ],
                     ),
-                  ),
+                  )
                 ],
               ),
             ),
